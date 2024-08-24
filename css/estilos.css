@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    margin-top: 40px;
+    position: fixed;
+    z-index: 1; /* se usa para acomodar el contenido de manera transversal */
+    
+}
+
+.container__menu{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; /* se usa para que los ul y li se justifiquen de manera mas ordenada y se alje del logo */
+    
+}
+
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img{
+    width: 60px;
+
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu ul{
+   display: flex; /* para que la lista este centrada en el eje x y no de manera de fila */
+
+}
+
+.menu ul li{
+    list-style: none; 
+    margin-left: 36px; /* se usa para que la lista tengan un espacio una de la otra */
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase; /* todo el texto se vuelve en mayuscula*/
+}
+
+#selected{
+    background: #7cc590;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+
+/* COVER*/
+
+.container__cover{
+    width: 100%;
+    height: 800px;
+    background-image: url(../images/Background-motion3.svg); /*se agrega la imagen que el hizo en photoshop*/
+    background-position: right;
+    background-repeat: no-repeat ;
+}
+
+.cover{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto ;
+    display: flex;
+    align-items: center; /*se  usa en conjunto con el display-flex para alinear el texto o cosa de manera ordenada y en este caso central*/
+    justify-content: space-between;/* se uso para que el texto se mantenga en su lugar alejado del la imgane */
+}
+
+.container__cover .text{
+    max-width: 400px;
+}
+
+.container__cover .text h1{
+    font-size: 36px;
+    font-weight: 600; /* grosor de la letra*/
+}
+
+.container__cover .text p{
+    font-size: 20px;
+    margin-top: 40px;
+} 
+
+.container__cover .text input{
+    padding: 18px 80px; /* cuando colocamos dos valores es para , de arriba hacia abajo y de derecha a isquierda osea el ancho */
+    border: none;
+    font-size: 16px;
+    border-radius: 50px; /* es para darle un etilo mas ovalado al boton */
+    margin-top: 40px;
+    background: linear-gradient(to right, #7cc590, #529f66);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 30px -12px #9dff93; /* se usa para darle la sombra al boton el 30px es el desvanecimiento o tranparencia y el -12 de expancion  */
+    text-transform: uppercase;
+}
+
+.container__cover .text input:hover{ /*se usa el hover en el boton para darle el estilo a la accion cuando pasemos el cursor encima del boton */
+    box-shadow: 1px 1px 30px -6px #9dff93;
+    transition: all 300ms; /*s usa para controlar lo rapidez de reeaccion del hover */
+}
+
+
+.container__cover .svg img{
+    width: 600px;
+    animation: move-vector 3s linear infinite;
+
+    
+    
+}
+
+@keyframes move-vector { /* se usa para darle la animacion al animation que creamo arriba */
+    0%{
+        transform: translateY(15px); 
+    }50%{ 
+        transform: translateY(0px);     /*se usa para darle el movimiento lo largo que sea y el rebote */
+    }100%{
+        transform: translateY(15px);
+    }
+    
+}
+
